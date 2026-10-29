@@ -15,8 +15,9 @@ const config = {
   favicon: "images/logo/favicon.png",
 
   // Set the production url of your site here
-  url: 'https://wrteam-in.github.io', // Your GitHub Pages URL
-  baseUrl: '/eclassify-doc/', // The repository name, preceded by a slash
+  url: process.env.SITE_URL || 'https://wrteam-in.github.io', // Your GitHub Pages URL
+  baseUrl: process.env.BASE_URL || '/eclassify-doc/', // The repository name, preceded by a slash
+  noIndex: process.env.NO_INDEX === 'true', // keep preview builds out of search engines
   organizationName: 'WRTeam-in', // Your GitHub username
   projectName: 'eclassify-doc', // Your repository name
   trailingSlash: true,
